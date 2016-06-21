@@ -1,6 +1,7 @@
 #!/bin/bash
 id=$(docker run -d \
 --net=host \
+-v /run/docker.sock:/run/docker.sock \
 -v /sys:/sys:ro \
 -v /mesos/slave/work:/tmp/mesos/work \
 -v /mesos/slave/log:/tmp/mesos/log \
