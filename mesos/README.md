@@ -17,9 +17,7 @@
         docker run -d \
         --name=mesos-slave \
         --net=host  \
-        -v /var/run/docker.sock:/var/run/docker.sock \
-        -v /usr/bin/docker:/usr/bin/docker \
-        -v /sys:/sys:ro -v /lib:/lib:ro -v /usr/lib/x86_64-linux-gnu/:/usr/lib/x86_64-linux-gnu/:ro \
+        -v /sys:/sys:ro
         -v /mesos/slave/work:/tmp/mesos/work \
         -v /mesos/slave/log:/tmp/mesos/log \
         -v /etc/docker.tar.gz:/etc/docker.tar.gz \
